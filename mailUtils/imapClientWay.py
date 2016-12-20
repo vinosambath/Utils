@@ -1,7 +1,7 @@
 import imapclient, pyzmail
 from datetime import date
 imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
-imapObj.login('vinosambath@gmail.com', 'Vinosam12')
+imapObj.login('vinosambath@gmail.com', '*')
 
 imapObj.select_folder('INBOX', readonly=True)
 UIDs = imapObj.search([u'SINCE', date(2016, 12, 17)])
