@@ -6,10 +6,10 @@ from email.mime.text import MIMEText
 
 
 imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
-imapObj.login('*', '*')
+imapObj.login('fakegithub@gmail.com', 'fakeyou1')
 
 imapObj.select_folder('INBOX', readonly=True)
-UIDs = imapObj.search([u'SINCE', date(2016, 12, 23)])
+UIDs = imapObj.search([u'SINCE', date(2016, 12, 22)])
 
 fromHash = {}
 
@@ -42,8 +42,8 @@ for uid in UIDs:
 
 MESSAGE = MIMEMultipart('alternative')
 MESSAGE['subject'] = "mimetext example"
-MESSAGE['To'] = "*"
-MESSAGE['From'] = "*"
+MESSAGE['To'] = "fakegithub@gmail.com"
+MESSAGE['From'] = "fakegithub@gmail.com"
 MESSAGE.preamble = ""
 
 s = ""
@@ -63,8 +63,8 @@ server = smtplib.SMTP('smtp.gmail.com:587')
 password = "Vinosam12"
 
 server.starttls()
-server.login("*", "*")
-server.sendmail("*", ["*"], MESSAGE.as_string())
+server.login("fakegithub@gmail.com", "fakeyou1")
+server.sendmail("fakegithub@gmail.com", ["fakegithub@gmail.com"], MESSAGE.as_string())
 server.quit()
 
 # part2 = MIMEText(s, 'html')
