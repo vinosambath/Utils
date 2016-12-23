@@ -9,7 +9,7 @@ imapObj = imapclient.IMAPClient('imap.gmail.com', ssl=True)
 imapObj.login('*', '*')
 
 imapObj.select_folder('INBOX', readonly=True)
-UIDs = imapObj.search([u'SINCE', date(2016, 12, 20)])
+UIDs = imapObj.search([u'SINCE', date(2016, 12, 23)])
 
 fromHash = {}
 
@@ -40,11 +40,11 @@ for uid in UIDs:
 		else:
 			fromHash[_from] = 1
 
-print(fromHash)
-smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
-smtpObj.ehlo()
-smtpObj.starttls()
-smtpObj.login('*', '*')
+MESSAGE = MIMEMultipart('alternative')
+MESSAGE['subject'] = "mimetext example"
+MESSAGE['To'] = "*"
+MESSAGE['From'] = "*"
+MESSAGE.preamble = ""
 
 s = ""
 s += "<table>"
@@ -57,7 +57,16 @@ for key in fromHash:
 	s += "<th>" + key + "</th>" + "<th>" + str(fromHash[key]) + "</th>"
 	s += "</tr>"
 
-part2 = MIMEText(s, 'html')
-print(s)
-print(smtpObj.sendmail('vinosambath@gmail.com', 'vinosambath@gmail.com', s))
-smtpObj.quit()
+HTML_BODY = MIMEText(s, 'html')
+MESSAGE.attach(HTML_BODY)
+server = smtplib.SMTP('smtp.gmail.com:587')
+password = "Vinosam12"
+
+server.starttls()
+server.login("*", "*")
+server.sendmail("*", ["*"], MESSAGE.as_string())
+server.quit()
+
+# part2 = MIMEText(s, 'html')
+# print(smtpObj.sendmail('vinosambath@gmail.com', 'vinosambath@gmail.com', s))
+# smtpObj.quit()
