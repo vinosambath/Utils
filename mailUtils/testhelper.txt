@@ -1,0 +1,10 @@
+db = client.test
+collection = db['mailStat']
+
+
+result = db.mailStat.insert_one({"mail":"*", "password":"*"})
+print(result.inserted_id)
+
+
+celery -A mailUtils beat --app=mailUtils.imapClientWay.app -l debug
+celery -A mailUtils worker --app=mailUtils.imapClientWay.app --loglevel=info

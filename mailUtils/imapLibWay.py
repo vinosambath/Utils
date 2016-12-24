@@ -1,6 +1,6 @@
 import imaplib, email, time
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('vinosambath@gmail.com', '*');
+mail.login('*', '*');
 mail.list()
 
 mail.select("inbox")
