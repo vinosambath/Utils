@@ -1,0 +1,14 @@
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\ElasticsearchTest.exe.config
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\obj\Debug\ElasticsearchTest.csprojResolveAssemblyReference.cache
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\ElasticsearchTest.exe
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\ElasticsearchTest.pdb
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Elasticsearch.Net.dll
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Nest.dll
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Newtonsoft.Json.dll
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Elasticsearch.Net.pdb
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Elasticsearch.Net.xml
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Nest.pdb
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Nest.xml
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\bin\Debug\Newtonsoft.Json.xml
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\obj\Debug\ElasticsearchTest.exe
+c:\users\vsambath\documents\visual studio 2015\Projects\ElasticsearchTest\ElasticsearchTest\obj\Debug\ElasticsearchTest.pdb
